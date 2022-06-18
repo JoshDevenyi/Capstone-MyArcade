@@ -28,6 +28,10 @@ h1, h2, h3, h4{
   font-size: 2.25em;
 }
 
+.gamePageHeading{
+  padding: 1em 0 0 0;
+}
+
 .paddingS{
   padding: .5em 0;
 }
@@ -328,13 +332,12 @@ footer{
 
 
 #featuredGames{
-  width: fit-content;
-  margin: 5em auto;
-  border: 1px solid black;
+  max-width: fit-content;
+  margin: 65px auto;
 }
 
 #popularHeading{
-  width: 85%;
+  width: 80%;
   margin: 0 auto 20px auto;
   font-style: italic;
 }
@@ -343,33 +346,35 @@ footer{
   text-align: center;
 }
 
-.gameDiv + .gameDiv{
+/* .gameDiv + .gameDiv{
   margin-left: 4.5em;
+} */
+
+
+.boxartBox{
+  width: 18em;
+  height: 18em;
 }
 
 .gameAlign{
   height: 100%;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
 }
 
-.boxartBox{
-  flex: 1;
+.gameAlign a{
+  height: 100%;
+  width: 100%;
 }
 
 .gameBoxart{
-  height: 300px;
-  width: 100%;
+  height: 100%;
+  max-width: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 #indexLinks{
-
   justify-content: space-around;
 }
 
@@ -383,6 +388,15 @@ footer{
 
 #portableSystem{
   height: 5.5em;
+}
+
+#popContent{
+
+}
+
+#popGames{
+  max-width: 55em;
+  justify-content: space-between;
 }
 
 .arrowLeft {
@@ -706,9 +720,8 @@ footer{
 
 
 .gameFlex{
-  margin-bottom: 2.5em;
-  /* TEMP HEIGHT */
-  height: 600px; 
+  height: 1px;
+  min-height: 35em; 
 }
 
 .gameButtonBox{
@@ -767,7 +780,7 @@ footer{
 }
 
 .gameReturn{
-  margin-top: 1em;
+  margin-top: 1.75em;
 
 }
 

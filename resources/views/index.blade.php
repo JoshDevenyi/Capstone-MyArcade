@@ -6,7 +6,7 @@
 
 <main>
 
-    <div id="indexContent" class="flexContainerCol">
+    <div id="indexContent">
         
         <div id="indexContentDiv">
 
@@ -24,47 +24,56 @@
             <div id="featuredGames">
 
                 <h2 id="popularHeading">Discover Popular Titles</h2>
+                
                 <ul style="display: none">
                     @foreach ($popgames as $game)
                         <li  class="popGamesData">{"id": {{$game->id}} , "name": "{{$game->name}}" , "cover":"{{$game->cover}}" }</li>
                     @endforeach
                 </ul>
 
-                <div class="flexContainer">
+                <div id="popContent" class="flexContainer">
 
                     <div class="arrowBox">
                         <div class="arrowLeft" id="arrowLeft"></div>
                     </div>
 
-                    <div class="gameDiv">
-                        <div class="flexContainerCol gameAlign">
-                            <div class="boxartBox imageGrow">
-                                <a href="/games/game/{{$popgames[0]->id}}" id="popLinkOne">
-                                    <img id="popGameOne" class="gameBoxart" src="{{$popgames[0]->cover}}" alt="{{$popgames[0]->name}} Boxart"/>
-                                </a>
+                    <div>
+
+                        <div id="popGames" class="flexContainer">
+
+                            <div class="gameDiv">
+                                <div class="boxartBox imageGrow">
+                                    <div class="flexContainerCol gameAlign">
+                                        <a href="/games/game/{{$popgames[0]->id}}" id="popLinkOne">
+                                            <img id="popGameOne" class="gameBoxart" src="{{$popgames[0]->cover}}" alt="{{$popgames[0]->name}} Boxart"/>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
 
-                    <div class="gameDiv">
-                        <div class="flexContainerCol gameAlign">
-                            <div class="boxartBox imageGrow">
-                                <a href="/games/game/{{$popgames[1]->id}}" id="popLinkTwo">
-                                    <img id="popGameTwo" class="gameBoxart" src="{{$popgames[1]->cover}}" alt="{{$popgames[1]->name}} Boxart"/>
-                                </a>
+                            <div class="gameDiv">
+                                    <div class="boxartBox imageGrow">
+                                    <div class="flexContainerCol gameAlign">
+                                        <a href="/games/game/{{$popgames[1]->id}}" id="popLinkTwo">
+                                            <img id="popGameTwo" class="gameBoxart" src="{{$popgames[1]->cover}}" alt="{{$popgames[1]->name}} Boxart"/>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="gameDiv">
-                        <div class="flexContainerCol gameAlign">
-                            <div class="boxartBox imageGrow">
-                                <a href="/games/game/{{$popgames[2]->id}}" id="popLinkThree">
-                                    <img id="popGameThree" class="gameBoxart" src="{{$popgames[2]->cover}}" alt="{{$popgames[2]->id}} Boxart"/>
-                                </a>
+                            <div class="gameDiv">
+                                    <div class="boxartBox imageGrow">
+                                        <div class="flexContainerCol gameAlign">
+                                            <a href="/games/game/{{$popgames[2]->id}}" id="popLinkThree">
+                                                <img id="popGameThree" class="gameBoxart" src="{{$popgames[2]->cover}}" alt="{{$popgames[2]->id}} Boxart"/>
+                                            </a>
+                                        </div>
+                                </div>
                             </div>
+
                         </div>
+
                     </div>
 
                     <div class="arrowBox">

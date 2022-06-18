@@ -8,7 +8,7 @@
 
     <div id="gameContent">
 
-        <h1 class="pageHeading paddingM">{{$game->name}}</h1>
+        <h1 class="pageHeading gamePageHeading">{{$game->name}}</h1>
 
         <div class="flexContainer gameFlex">
 
