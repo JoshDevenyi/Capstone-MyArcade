@@ -126,8 +126,8 @@
                                 </div>
                             </td>
 
-                            <?php$gameInfo = "No Game Found"?>
-                            <?php$gameID = "No Game ID Found"?>
+                            <?php $gameInfo = "No Game Found"?>
+                            <?php $gameID = "No Game ID Found"?>
                             @foreach($games as $gameKey => $game)
 
                                 @if($arcade->game_id === $game->id)
