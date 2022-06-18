@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="{{ url('/css/styles.css') }}">
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="https://kit.fontawesome.com/b536528e9f.js" crossorigin="anonymous"></script>
-    {{-- <script src="{{ url('/js/indexJS.js') }}"></script> --}}
 
 </head>
 

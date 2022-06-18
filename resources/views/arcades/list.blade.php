@@ -4,7 +4,7 @@
 
 @section ('content')
 
-    <main class="w3-padding">
+    <main>
 
         <div class="content">
 
