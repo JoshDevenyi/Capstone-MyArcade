@@ -15,21 +15,6 @@ $response = Http::get('https://www.giantbomb.com/api/game/3030-21373/?api_key=00
 class GamesController extends Controller
 {
 
-    // function apitest()
-    // {
-    //     $collection = Http::get("https://www.giantbomb.com/api/game/3030-21373/?api_key=00d6b5a393527056b1b51b74c3f85ab7c5445e45&format=json&field_list=name,releases,original_game_rating,developers,images,platforms,publishers");
-    //     return view('games.game', ['collection'=>$collection['results']]);
-    // }
-
-    // function apitest()
-    // {
-    //     return Http::withHeaders([
-    //         'Client-ID' => '6xj5agu9t4chtbq5l22d1hc15nex6f',
-    //         'Authorization' => 'Bearer j50s8h9yb2dcp1mbgo1yl6dys83f0d'
-    //     ])->post("https://api.igdb.com/v4/age_ratings");
-    // }
-
-
     // LISTS
     public function list()
     {
