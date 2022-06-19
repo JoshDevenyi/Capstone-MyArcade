@@ -1,5 +1,7 @@
 window.onload = function () {
 
+    menuOnOff();
+
     document.getElementById("deleteEmoji").onmouseover = function() {hoverInUserDelete()};
     
     document.getElementById("deleteEmoji").onmouseout = function() {hoverOutUserDelete()};

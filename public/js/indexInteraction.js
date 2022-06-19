@@ -1,7 +1,9 @@
 
 window.onload = function () {
 
-    //Emoji Interaction
+    menuOnOff();
+
+    ////Emoji Interaction////
 
     document.getElementById("indexEmoji").onmouseover = function() {hoverInIndex()};
     document.getElementById("indexEmoji").onmouseout = function() {hoverOutIndex()};
@@ -14,8 +16,8 @@ window.onload = function () {
         indexEmoji.setAttribute('src', '../../images/Smileface.png');
     }
 
-    //Popular Game Browsing
-
+    
+    ////Popular Game Browsing////
     var arrowRight = document.getElementById("arrowRight");
     var arrowLeft= document.getElementById("arrowLeft");
 
@@ -92,6 +94,9 @@ window.onload = function () {
         popLinkThree.setAttribute('href',"/games/game/"+ gameList[counterThree].id);
 
     }
+    
+
+    
 
 
 }

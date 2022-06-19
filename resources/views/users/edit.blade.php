@@ -8,7 +8,11 @@
 
         <div class="content">
 
-            <h1 class="pageHeading marginM">Edit User: {{$user -> username}}</h1>
+            <h1 class="pageHeading marginM editAddHeading inputPageHeading">
+                Edit User:
+                <br/>    
+                <span class="editOldName">{{$user -> username}}</span>
+            </h1>
 
             <form method="post" action="/users/edit/{{$user->id}}" novalidate class="w3-margin-bottom">
 

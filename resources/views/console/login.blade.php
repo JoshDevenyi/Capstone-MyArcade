@@ -8,7 +8,7 @@
         
         <div class="content">
 
-            <h1 class="pageHeading paddingM"> Log Into MyArcade</h1>
+            <h1 class="pageHeading paddingM inputPageHeading"> Log Into MyArcade</h1>
 
             <div class="flexContainer loginFlex">
 

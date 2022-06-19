@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Orbitron:wght@400;500;600;700;800&display=swap');
 
 *, *::before, *::after{
-
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -64,6 +63,7 @@ h1, h2, h3, h4{
 .flexContainerCol{
   display: flex;
   flex-flow: column wrap;
+  height: 100%;
 }
 
 body, #myArcade{
@@ -92,7 +92,6 @@ main{
 }
 
 .errorText{
-
   color: #fad400;
   font-weight: bold;
   margin: .5em 0;
@@ -164,7 +163,6 @@ input, select option{
 }
 
 .messageBox{
-
   width: 100%;
   border-radius: 5px;
   text-align: center;
@@ -172,6 +170,69 @@ input, select option{
   font-size: 1.25em;
   font-weight: bold;
   margin: 0 0 1em 0;
+}
+
+.emoji{
+  width: 5.5em;
+}
+
+.emojiBig{
+  width: 8.5em;
+  margin: 1em 0 3.5em 0;
+}
+
+.center{
+  margin: 0 auto;
+}
+
+.emptyMessage{
+  font-size: 2em;
+}
+
+.emptyArcade{
+  text-align: center;
+}
+
+.linkButton{
+  background-color: white;
+  color: #006b99;
+  text-align: center;
+  font-weight: bold;
+  padding: .25em;
+  width: 5em;
+}
+
+.linkButton + .linkButton{
+  margin-top: .3em;
+}
+
+.content{
+  width: fit-content;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 1em;
+}
+
+.deleteContent{
+  width: fit-content;
+  height: 100%;
+  padding: 0 2em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.readOnlyInput{
+  background: #ee3586;
+  color: white;
+  border: 3px solid white;
+}
+
+.star{
+  font-size: 1.3em;
+}
+
+#indexLinks{
+  padding-bottom: 2em;
 }
 
 
@@ -228,7 +289,7 @@ header{
 
 .headerLink{
   list-style: none;
-  font-size: .9em;
+  font-size: .8em;
 }
 
 .headerLink a, .headerLink a:visited{
@@ -246,6 +307,63 @@ header{
   margin-left: 1em;
 }
 
+.menuIcon{
+  display: none;
+  font-size: 60px;
+}
+
+#headerIcon, #headerIcon:visited{
+  color: white;
+}
+
+#headerIcon:hover, #headerIcon:active{
+  cursor: pointer; 
+}
+
+#siteMenuBelowHeader{
+  display: none;
+}
+
+.belowHeaderLink, .belowHeaderLink:visited{
+  list-style: none;
+  background-color: #9e1752;
+  padding: .5em;
+  border-top: 2px solid white;
+}
+
+.belowHeaderLink:hover{
+  background-color: #891547;
+} 
+
+.belowHeaderLink:active{
+ background-color: #640e34;
+}
+
+.belowHeaderLinkBottom{
+  border-bottom: 2px solid white;
+}
+
+.belowHeaderLink a{
+  list-style: none;
+}
+
+
+@media screen and (max-width: 800px){
+
+  #siteMenu{
+    position: relative;
+  }  
+
+  #headerLinks{
+    display: none;
+  }
+
+  .menuIcon{
+    display: flex;
+  }
+  
+}
+
 
 /* Footer Styles */
 footer{
@@ -255,11 +373,17 @@ footer{
 }
 
 
-
 /* <<<<<< INPUT/FORM STYLES >>>>>> */
 
-
 /* Add/Edit Forms */
+
+.editAddHeading{
+  max-width: 20em;
+}
+
+.editOldName{
+  font-size: .8em;
+}
 
 .inputForm{
   width: fit-content;
@@ -271,9 +395,7 @@ footer{
 }
 
 .inputGroup label{
-
   margin-right: 2em;
-
 }
 
 .inputGroup + .inputGroup{
@@ -282,7 +404,6 @@ footer{
 
 .inputGroup input, .inputGroup select{
   float: right;
-
 }
 
 .summaryTextarea{
@@ -296,6 +417,22 @@ footer{
 
 .inputButtonFlex{
   justify-content: space-between;
+}
+
+
+@media screen and (max-width: 600px){
+  .inputGroup input, .inputGroup label, .inputGroup select, .errorMessage{
+    font-size: 1.15em;
+  }
+
+  .summaryTextarea{
+    font-size: 1em;
+  }
+
+  .inputPageHeading{
+    font-size: 1.85em;
+  }
+
 }
 
 
@@ -330,7 +467,6 @@ footer{
   margin: 8 5px 0;
 }
 
-
 #featuredGames{
   max-width: fit-content;
   margin: 65px auto;
@@ -345,11 +481,6 @@ footer{
 .gameDiv{
   text-align: center;
 }
-
-/* .gameDiv + .gameDiv{
-  margin-left: 4.5em;
-} */
-
 
 .boxartBox{
   width: 18em;
@@ -390,10 +521,6 @@ footer{
   height: 5.5em;
 }
 
-#popContent{
-
-}
-
 #popGames{
   max-width: 55em;
   justify-content: space-between;
@@ -430,6 +557,54 @@ footer{
 }
 
 
+@media screen and (max-width: 1050px){
+  #gameDiv3{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 770px){
+
+  #gameDiv2{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 600px){
+  .gameSystems{
+    display: none;
+
+  }
+
+  .indexHeading{
+    flex-direction: column;
+  }
+
+  #indexTitle{
+    margin: 65px 0 25px 0;
+  }
+
+  #indexEmoji{
+    /* margin-bottom: 65px; */
+    margin-left: initial;
+  }
+
+  #indexLinks{
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .indexLink + .indexLink{
+    margin-top: 1em;
+  }
+  
+}
+
+
 /* <<<<<< LIST Styles >>>>>> */
 
 /* Arcade List Styles */
@@ -445,9 +620,7 @@ footer{
 }
 
 .arcadeAdminHeading + .arcadeAdminHeading{
-
   margin-left: 1em;
-
 }
 
 .arcadeTextEntry {
@@ -464,11 +637,11 @@ footer{
 }
 
 .arcadeAdminGame{
-  max-width: 12em;
+  width: 12em;
 }
 
 .arcadeAdminPlatform{
-  max-width: 8em;
+  width: 8em;
 }
 
 .arcadeAdminPlaytime{
@@ -488,13 +661,66 @@ footer{
   margin: 0 1em;
 }
 
+.narrowButtonArcadeAdmin{
+  display: none;
+}
+
+@media screen and (max-width: 1200px){
+  .narrowButtonArcadeAdmin{
+    display: block;
+  }
+
+  .wideButtonArcadeAdmin{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1140px){
+  .adminCompleteHeading, #arcadeAdminCompleteCell{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1060px){
+  .adminRatingHeading, #arcadeAdminRatingCell{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 940px){
+  .adminDateHeading, #arcadeAdminDateCell{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 830px){
+  .adminTimeHeading, #arcadeAdminTimeCell{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 730px){
+  .adminLocationHeading, #arcadeAdminLocationCell{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px){
+  .adminPlatformHeading, #arcadeAdminPlatformCell{
+    display: none;
+  }
+}
+
+
+
+/* Non-Admin Arcade List */
 
 .arcadeListGameName{
-  max-width: 10em;
+  width: 10em;
 }
 
 .arcadePlatformData {
-  max-width: 8em;
+  width: 8em;
 }
 
 .arcadeLocationEntry {
@@ -514,7 +740,7 @@ footer{
 }
 
 .arcadeRatingEntry{
-  max-width: 8em;
+  width: 8em;
 }
 
 .arcadeEntry td{
@@ -564,6 +790,44 @@ footer{
   margin-top: 1em;
 }
 
+.narrowButtonArcade{
+  display: none;
+}
+
+
+@media screen and (max-width: 1110px){
+  #arcadeRatingHeading, .arcadeRatingTD{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 950px){
+  #arcadeCompleteHeading, .arcadeCompleteTD{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 830px){
+  #arcadeDateHeading, .arcadeDateTD{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 720px){
+  #arcadePlatformHeading, .arcadePlatformTD{
+    display: none;
+  }
+  .wideButtonArcade{
+    display: none;
+  }
+  .narrowButtonArcade{
+    display: block;
+  }
+  
+
+}
+
+
 
 
 /* Game List Styles */
@@ -600,19 +864,15 @@ footer{
   margin: 0 1em;
 }
 
-
 .gameEntryButtons {
   text-align: center;
   width: 8em;
 }
 
-
 .gameEntry td{
-
   border-top: 2px solid white;
   padding: 1.5em 0;
   width: fit-content;
-  
 }
 
 .gameInfoBox{
@@ -621,7 +881,7 @@ footer{
 
 .gameTextBox{
   max-width: 11.5em;
-  margin: 0 auto;
+  margin: 0 1em;
   text-align: center;
 }
 
@@ -639,10 +899,8 @@ footer{
 }
 
 .lastGameEntry td{
-
   border-top: 2px solid white;
   padding: 1.5em 0;
-  
 }
 
 
@@ -661,7 +919,6 @@ footer{
   color:#fad400
 }
 
-
 #gameListButton{
   width: fit-content;
 }
@@ -671,9 +928,40 @@ footer{
   border: 3px solid black;
 }
 
+.narrowButtonGame{
+  display: none;
+}
+
+@media screen and (max-width: 940px){
+ .gameEntryRating, #gameRatingHeading{
+  display: none;
+ }
+}
+
+@media screen and (max-width: 830px){
+  .gameReleaseCell, #gameReleaseHeading{
+   display: none;
+  }
+}
+
+@media screen and (max-width: 685px){
+  .gameGenreCell, #gameGenreHeading{
+   display: none;
+  }
+  #gamesListHeading{
+    font-size: 1.75em;
+  }
+
+  .narrowButtonGame{
+    display: block;
+  }
+  .wideButtonGame{
+    display: none;
+  }
+}
+
 
 /* Game Admin List Styles */
-
 .udButton, .udButton:visited{
   font-size: 1em;
   text-align: center;
@@ -687,12 +975,22 @@ footer{
   align-self: end;
   text-decoration: none;
   margin: 0 auto;
-} 
+  position: relative;
+}
+
+.buttonIcon{
+  position: relative;
+  top: 1px;
+}
+
+.udButtonIcon{
+  width: 2em;
+  font-size: 1.25em;
+}
 
 .udButton:hover{
   background-color: #b82263;
 }
-
 
 .udButton:active{
   background-color: #9e1752;
@@ -707,7 +1005,7 @@ footer{
 
 .dataLabel{
   font-weight: bold;
-  font-size: 1.15em;
+  font-size: 1.05em;
 }
 
 /* Game Page Setting */
@@ -718,38 +1016,34 @@ footer{
   padding: 0 1em;
 }
 
-
 .gameFlex{
   height: 1px;
-  min-height: 35em; 
+  min-height: 35em;
+  width: fit-content;
 }
 
 .gameButtonBox{
-
   width: fit-content;
   margin: .75em 0 1.4em 0;
-
 }
 
 .buttonFlex{
-
   margin-top: 1em;
-
 }
 
 .buttonFlex a{
-
   margin-right: 1em;
-
 }
 
 .gamePageImageBox{
   height: 100%;
+  flex: .5 0 0;
 }
 
 .gamePageImageFlex{
   align-items: center;
   height: 100%;
+  position: relative;
 }
 
 .gamePageBoxart{
@@ -767,17 +1061,30 @@ footer{
 }
 
 .gamePageData .flexContainerCol{
-
   justify-content: center;
   height: 100%;
-  
 }
 
 .gameData{
-
-  font-size: 1.15em;
-
+  font-size: 1.05em;
 }
+
+.gameNameData{
+  width: 9em;
+}
+
+.gamePlaformData{
+  width: 7em;
+}
+
+.gameGenreData{
+  width: 7em;
+}
+
+.gameDateData{
+  width: 6.95em;  
+}
+
 
 .gameReturn{
   margin-top: 1.75em;
@@ -800,11 +1107,34 @@ footer{
 }
 
 .gameRating{
-
   margin: .5em 0;
-
 }
 
+
+@media screen and (max-width: 768px){
+
+  .gamePageHeading{
+    padding-bottom: 1em;
+  }
+
+  .gamePageBoxart{
+    margin: 0 auto;
+  }
+
+  .gameFlex{
+    height: initial;
+    flex-direction: column;
+  }
+
+  .gamePageData{
+    padding-top: 2em;
+  }
+
+  .gameButtonBox{
+    margin-left: 2.5em;
+    margin-top: 1.5em;
+  }
+}
 
 
 /* Userpage Styles */
@@ -820,17 +1150,14 @@ footer{
 }
 
 .userData{
-
   font-size: 1.15em;
-
 }
 
 .userButtonBox{
-
   width: fit-content;
   margin: 2em 0 2em 0;
-
 }
+
 
 
 /* User List Styles */
@@ -873,30 +1200,51 @@ footer{
 .userNameEntry{
   width: 12.5em;
   text-align: center;
-
 }
 
 .userNameEntry a, .userNameEntry a:visited{
-  font-size: 1.15em;
+  font-size: 1em;
   font-weight: bold;
-
 }
 
 .userNameEntry a:hover, .userNameEntry a:active{
   color:#fad400
 }
 
+.userCellData{
+  margin: 0 .5em;
+
+}
+
+.narrowButtonUser{
+  display: none;
+}
+
+@media screen and (max-width: 600px){
+
+  .wideButtonUser{
+    display: none;
+  }
+
+  .narrowButtonUser{
+    display: block;
+  }
+
+  .listSortLink, .userCellData{
+    font-size: .9em;
+
+  }
+
+}
 
 
 /* Delete Confirm Pages */
 .deleteGroups{
-
   justify-content: space-between;
-
 }
 
-/* Admin Page Styles */
 
+/* Admin Page Styles */
 
 #dashboardContent{
   width: 100%;
@@ -913,92 +1261,34 @@ footer{
   width: 100%;
   justify-content: space-evenly;
   margin-top: 2em;
+  text-align: center;
+}
+
+.adminButton{
+  width: 9em;
 }
 
 #dashboardList li{
   list-style: none;
 }
 
+@media screen and (max-width: 768px){
+  #dashboardList{
+    margin-top: 0;
+    flex-direction: column;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+  }
 
-
-.neonText{
-color:#fff;
-text-shadow:
-0 0 7px #fff,
-0 0 10px #fff,
-0 0 21px #fff,
-0 0 42px #c32469,
-0 0 82px #c32469,
-0 0 102px #c32469;
-}
-
-
-/* Misc. Styles */
-
-.emoji{
-  width: 5.5em;
-}
-
-.emojiBig{
-  width: 8.5em;
-  margin: 1em 0 3.5em 0;
-}
-
-.center{
-  margin: 0 auto;
-}
-
-.emptyMessage{
-  font-size: 2em;
-}
-
-.emptyArcade{
-  text-align: center;
-}
-
-.linkButton{
-  background-color: white;
-  color: #006b99;
-  text-align: center;
-  font-weight: bold;
-  padding: .25em;
-  width: 5em;
-}
-
-.linkButton + .linkButton{
-  margin-top: .3em;
-}
-
-.content{
-  width: fit-content;
-  margin: 0 auto;
-  height: 100%;
-  padding: 0 1em;
-}
-
-.deleteContent{
-  width: fit-content;
-  height: 100%;
-  padding: 0 2em;
-  text-align: center;
-}
-
-.readOnlyInput{
-  background: #ee3586;
-  color: white;
-  border: 3px solid white;
-}
-
-.star{
-  font-size: 1.3em;
-}
-
-
-
-
-
-#indexLinks{
-  padding-bottom: 2em;
+  .adminButton{
+    align-self: center;
+  }
+  
+  .adminButton + .adminButton{
+    margin-top: 2em;
+  }
+  
 }
 
 
@@ -1015,7 +1305,6 @@ text-shadow:
   transform: scale(1.07,1.07)
 }
 
-
 .imageSpin {
   transform-origin: center;
   transition: transform 1s;
@@ -1025,12 +1314,9 @@ text-shadow:
   transform: rotate(360deg);
 }
 
-
-
 .joystickHop:hover{
   animation: hop .5s;
 }
-
 
 @keyframes hop {
   

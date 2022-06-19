@@ -12,7 +12,6 @@
 
         <div class="flexContainer gameFlex">
 
-            
             <div class="gamePageImageBox">
 
                 <div class="gamePageImageFlex flexContainer">

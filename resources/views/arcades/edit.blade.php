@@ -8,7 +8,7 @@
 
         <div class="content">
 
-            <h1 class="pageHeading marginM">Edit Arcade Game</h1>
+            <h1 class="pageHeading marginM inputPageHeading">Edit Arcade Game</h1>
 
             <form method="post" action="/arcades/edit/{{$arcade->id}}" novalidate class="w3-margin-bottom">
 

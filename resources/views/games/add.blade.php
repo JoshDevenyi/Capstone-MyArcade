@@ -8,7 +8,7 @@
 
         <div class="content">
 
-            <h1 class="pageHeading marginM">Add New Game</h1>
+            <h1 class="pageHeading marginM inputPageHeading">Add New Game</h1>
 
             <form method="post" action="/games/add" novalidate class="inputForm">
 
@@ -112,7 +112,7 @@
                 </div>    
 
                 <div class="inputGroup">
-                    <label for="cover">Box Art Image URL:</label>
+                    <label for="cover">Box Art URL:</label>
                     <input type="text" name="cover" id="cover" required value="{{old('cover')}}">
 
                     @if($errors->first('cover'))

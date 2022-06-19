@@ -44,56 +44,56 @@
                 <table id="arcadesTable" cellspacing="0">
 
                     <tr>
-                        <th>
+                        <th id="arcadeGameHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/arcade/games/{{auth()->user()->id}}">
                                     Game
                                 </a>
                             </div>
                         </th>
-                        <th>
+                        <th id="arcadePlatformHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/arcade/platform/{{auth()->user()->id}}">
                                     Platform
                                 </a>
                             </div>
                         </th>
-                        <th>
+                        <th id="arcadeLocationHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/arcade/location/{{auth()->user()->id}}">
                                     Location
                                 </a>
                             </div>
                         </th>
-                        <th>
+                        <th id="arcadeTimeHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/arcade/playtime/{{auth()->user()->id}}">
                                     Playtime
                                 </a>
                             </div>
                         </th>
-                        <th>
+                        <th id="arcadeDateHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/arcade/date/{{auth()->user()->id}}">
-                                    Date Obtained
+                                    Acquired
                                 </a>
                             </div>
                         </th>
-                        <th>
+                        <th id="arcadeCompleteHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/arcade/completed/{{auth()->user()->id}}">
-                                    Completed
+                                    Completed?
                                 </a>
                             </div>
                         </th>
-                        <th>
+                        <th id="arcadeRatingHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/arcade/rating/{{auth()->user()->id}}">
                                     Rating
                                 </a>
                             </div>
                         </th>
-                        <th></th>
+                        <th id="arcadeButtonHeading"></th>
                     </tr>
 
                     @foreach($arcades as $arcadeKey => $arcade)
@@ -129,12 +129,11 @@
                                 </div>
                             </td>
 
-                            <td>
+                            <td class="arcadePlatformTD">
                                 <div class="arcadePlatformData arcadeTextEntry">
                                     {{$arcade->platform}}
                                 </div>
                             </td>
-                            
 
                             <td>
                                 <div class="arcadeLocationData" >
@@ -151,7 +150,7 @@
                             </td>
 
 
-                            <td>
+                            <td class="arcadeDateTD">
                                 <div class="arcadeDateEntry arcadeTextEntry">
                                     {{date('F jS Y', strtotime($arcade->date_obtained))}}
                                 </div>
@@ -159,20 +158,20 @@
 
                             <!-- Turn Boolean to Yes/No -->
                             @if($arcade->completed === 1)
-                                <td>
+                                <td class="arcadeCompleteTD">
                                     <div class="arcadeTextEntry">
                                         Yes
                                     </div>
                                 </td>
                             @else
-                                <td>
+                                <td class="arcadeCompleteTD">
                                     <div class="arcadeTextEntry">
                                         No
                                     </div>
                                 </td>
                             @endif
                             
-                            <td class="arcadeTextEntry">
+                            <td class="arcadeTextEntry arcadeRatingTD">
                                 <div class="arcadeRatingEntry arcadeTextEntry">
                                     @for($x = 1; $x <= 5; $x++)
                                         @if($x <= $arcade->score)
@@ -187,11 +186,13 @@
                             <td>
                                 <div class="arcadeButtons">
                                     <a href="/arcades/edit/{{$arcade->id}}">
-                                        <div class="arcadeButton arcadeEdit">Edit</div>
+                                        <div class="arcadeButton arcadeEdit wideButtonArcade">Edit</div>
+                                        <div class="udButton udButtonIcon udButtonEdit narrowButtonArcade"><span class="iconify buttonIcon" data-icon="clarity:edit-solid"></span></div>
                                     </a>
 
                                     <a href="/arcades/deleteconfirm/{{$arcade->id}}">
-                                        <div class="arcadeButton">Remove</div>
+                                        <div class="arcadeButton wideButtonArcade">Remove</div>
+                                        <div class="udButton udButtonIcon udButtonEdit narrowButtonArcade"><span class="iconify buttonIcon" data-icon="ep:delete-filled"></span></div>
                                     </a>
                                 </div>
                             </td>

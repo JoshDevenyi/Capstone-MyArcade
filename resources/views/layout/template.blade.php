@@ -10,7 +10,9 @@
     <link rel="stylesheet" type="text/css" href="{{ url('/css/styles.css') }}">
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="https://kit.fontawesome.com/b536528e9f.js" crossorigin="anonymous"></script>
-
+    <script src="{{ url('/js/MenuOnOff.js') }}"></script> 
+    <script src="{{ url('/js/template.js') }}"></script>
+    
 </head>
 
 <body id="myArcade">
@@ -73,16 +75,66 @@
                         @endif
                         
                     </ul>
+
+                    <div class="menuIcon">
+                        <span id="headerIcon" class="iconify" data-icon="heroicons-outline:menu"></span>
+                    </div>
+
                 </div>
 
             </div>
+
         </header>
+
+        <div id="siteMenuBelowHeader">
+
+            <div>
+
+
+                @if(Auth::check())
+
+                    <a href="/users/user/{{auth()->user()->id}}">
+                        <p class="belowHeaderLink">{{auth()->user()->username}}</p>
+                    </a>
+
+                    <a href="/arcades/arcade/{{auth()->user()->id}}"">
+                        <p class="belowHeaderLink" >YourArcade</p>
+                    </a>
+
+                    <a href="/games/list">
+                        <p class="belowHeaderLink">All Games</p>
+                    </a>
+
+                    @if(auth()->user()->account_type === "admin")
+                        <a  href="/dashboard">
+                            <p class="belowHeaderLink">Admin Dashboard</p>
+                        </a>
+                    @endif
+
+                    <a href="/logout/"><p class="belowHeaderLink belowHeaderLinkBottom">Log Out</p></a>
+
+                @else
+
+                    <a href="/games/list">
+                        <p class="belowHeaderLink">All Games</p>
+                    </a>
+
+                    <a href="/login/">
+                        <p class="belowHeaderLink belowHeaderLinkBottom">Log In</p>
+                    </a>
+
+                @endif
+                
+                </div>
+
+        </div>
+
 
 
     @yield ('content')
     
 
-    <footer class="w3-padding">
+    <footer>
         <p>©Josh Devenyi, 2022</p>
     </footer>
 

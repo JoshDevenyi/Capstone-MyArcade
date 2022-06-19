@@ -1,5 +1,7 @@
 window.onload = function () {
 
+    menuOnOff();
+
     document.getElementById("sadEmoji").onmouseover = function() {hoverInUserDelete()};
     
     document.getElementById("sadEmoji").onmouseout = function() {hoverOutUserDelete()};

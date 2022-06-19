@@ -43,56 +43,56 @@
                 <table id="arcadesTable" cellspacing="0">
 
                     <tr>
-                        <th class="arcadeAdminHeading">
+                        <th class="arcadeAdminHeading adminUserHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/list/users">
                                     User
                                 </a>
                             </div>
                         </th>
-                        <th class="arcadeAdminHeading">
+                        <th class="arcadeAdminHeading adminGameHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/list/games">
                                     Game
                                 </a>
                             </div>
                         </th>
-                        <th class="arcadeAdminHeading">
+                        <th class="arcadeAdminHeading adminPlatformHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/list/platform">
                                     Platform
                                 </a>
                             </div>
                         </th>
-                        <th class="arcadeAdminHeading">
+                        <th class="arcadeAdminHeading adminLocationHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/list/location">
                                     Location
                                 </a>
                             </div>
                         </th>
-                        <th class="arcadeAdminHeading">
+                        <th class="arcadeAdminHeading adminTimeHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/list/playtime">
                                     Playtime
                                 </a>
                             </div>
                         </th>
-                        <th class="arcadeAdminHeading">
+                        <th class="arcadeAdminHeading adminDateHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/list/date">
                                     Date
                                 </a>
                             </div>
                         </th>
-                        <th class="arcadeAdminHeading">
+                        <th class="arcadeAdminHeading adminCompleteHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/list/completed">
                                     Completed?
                                 </a>
                             </div>
                         </th>
-                        <th class="arcadeAdminHeading">
+                        <th class="arcadeAdminHeading adminRatingHeading">
                             <div class="linkBox">
                                 <a class="listSortLink" href="/arcades/list/rating">
                                     Rating
@@ -143,13 +143,13 @@
                                 </div>
                             </td>
 
-                            <td>
+                            <td id="arcadeAdminPlatformCell">
                                 <div class="arcadeAdminPlatform arcadeTextEntry">
                                     {{$arcade->platform}}
                                 </div>
                             </td>
 
-                            <td>
+                            <td id="arcadeAdminLocationCell">
                                 <div class="arcadeAdminLocation" >
                                     <div class="arcadeLocationEntry " >
                                         {{$arcade->location}}
@@ -157,13 +157,13 @@
                                 </div>
                             </td>
 
-                            <td>
+                            <td id="arcadeAdminDateCell">
                                 <div class="arcadeAdminPlaytime arcadeTextEntry">
                                     {{$arcade->playtime}} Hours
                                 </div>
                             </td>
 
-                            <td>
+                            <td id="arcadeAdminDateCell">
                                 <div class="arcadeAdminDate arcadeTextEntry">
                                     {{date('F jS Y', strtotime($arcade->date_obtained))}}
                                 </div>
@@ -171,39 +171,35 @@
 
                             <!-- Turn Boolean to Yes/No -->
                             @if($arcade->completed === 1)
-                                <td>
+                                <td id="arcadeAdminCompleteCell">
                                     <div class="arcadeTextEntry">
                                         Yes
                                     </div>
                                 </td>
                             @else
-                                <td>
+                                <td id="arcadeAdminCompleteCell">
                                     <div class="arcadeTextEntry">
                                         No
                                     </div>
                                 </td>
                             @endif
                             
-                            <td>
+                            <td id="arcadeAdminRatingCell">
                                 <div class="arcadeAdminRating arcadeTextEntry">
-                                    @for($x = 1; $x <= 5; $x++)
-                                        @if($x <= $arcade->score)
-                                            <span class="iconify star" data-icon="ant-design:star-filled"></span>
-                                        @else
-                                            <span class="iconify star" data-icon="ant-design:star-outlined"></span>
-                                        @endif
-                                    @endfor
+                                    {{$arcade->score}}
                                 </div>
                             </td>
 
                             <td >
                                 <div class="arcadeButtons">
                                     <a href="/arcades/edit/{{$arcade->id}}">
-                                        <div class="arcadeButton arcadeEdit">Edit</div>
+                                        <div class="arcadeButton arcadeEdit wideButtonArcadeAdmin">Edit</div>
+                                        <div class="udButton udButtonIcon udButtonEdit narrowButtonArcadeAdmin"><span class="iconify buttonIcon" data-icon="clarity:edit-solid"></span></div>
                                     </a>
 
                                     <a href="/arcades/deleteconfirm/{{$arcade->id}}">
-                                        <div class="arcadeButton">Remove</div>
+                                        <div class="arcadeButton wideButtonArcadeAdmin">Remove</div>
+                                        <div class="udButton udButtonIcon udButtonEdit narrowButtonArcadeAdmin"><span class="iconify buttonIcon" data-icon="ep:delete-filled"></span></div>
                                     </a>
                                 </div>
                             </td>

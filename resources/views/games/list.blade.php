@@ -24,35 +24,35 @@
             <table id="gamesTable" cellspacing="0">
 
                 <tr >
-                    <th></th>
+                    <th id="gameNameHeading"></th>
                     <th>
                         <a class="listSortLink" href="/games/list">
                             Name
                         </a>
                     </th>
-                    <th>
+                    <th id="gamePlatformHeading">
                         <a class="listSortLink" href="/games/list/platform">
                             Platforms
                         </a>
                     </th>
-                    <th>
+                    <th id="gameGenreHeading">
                         <a class="listSortLink" href="/games/list/genre">
                             Genres
                         </a>
                     </th>
-                    <th>
+                    <th id="gameReleaseHeading">
                         <a class="listSortLink" href="/games/list/date">
-                            Release Date
+                            Released
                         </a>
                     </th>
-                    <th>
+                    <th id="gameRatingHeading">
                         <a class="listSortLink" href="/games/list/rating">
-                            Age Rating
+                            Rating
                         </a>
                     </th>
                     @if(Auth::check())
                         @if(auth()->user()->account_type === "admin")
-                            <th></th>
+                            <th id="gameAdminHeading" ></th>
                         @endif
                     @endif
 
@@ -81,22 +81,22 @@
                                 </a>
                             </td>
                             <td class="gameInfoBox gameEntryName">
-                                <div class="gameTextBox">
+                                <div class="gameTextBox gameNameData">
                                     <a href="/games/game/{{$value->id}}">{{$value->name}}</a>
                                 </div>
                             </td>
-                            <td class="gameInfoBox">
-                                <div class="gameTextBox">
+                            <td class="gameInfoBox gamePlatformCell">
+                                <div class="gameTextBox gamePlaformData">
                                 {{$value->platforms}}
                                 </div>
                             </td>
-                            <td class="gameInfoBox">
-                                <div class="gameTextBox">
+                            <td class="gameInfoBox gameGenreCell">
+                                <div class="gameTextBox gameGenreData">
                                     {{$value->genres}}
                                 </div>
                             </td>
-                            <td classe="gameInfoBox">
-                                <div class="gameTextBox">
+                            <td class="gameInfoBox gameReleaseCell">
+                                <div class="gameTextBox gameDateData">
                                     {{date('F jS Y', strtotime($value->release_date))}}
                                 <div>
                             </td>
@@ -123,11 +123,13 @@
                                 <td class="udButtons gameEntryButtons">      
                                 
                                     <a href="/games/edit/{{$value->id}}">
-                                        <div class="udButton udButtonEdit editButton">Edit</div>
+                                        <div class="udButton udButtonEdit wideButtonGame">Edit</div>
+                                        <div class="udButton udButtonIcon udButtonEdit narrowButtonGame"><span class="iconify buttonIcon" data-icon="clarity:edit-solid"></span></div>
                                     </a>
         
                                     <a href="/games/deleteconfirm/{{$value->id}}">
-                                        <div class="udButton deleteButton">Delete</div>
+                                        <div class="udButton wideButtonGame">Delete</div>
+                                        <div class="udButton udButtonIcon narrowButtonGame"><span class="iconify buttonIcon" data-icon="ep:delete-filled"></span></div>
                                     </a>
 
                                 </td>

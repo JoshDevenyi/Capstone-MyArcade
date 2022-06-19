@@ -8,7 +8,7 @@
 
         <div class="content">
 
-            <h1 class="pageHeading marginM">Add Game to YourArcade</h1>
+            <h1 class="pageHeading marginM inputPageHeading">Add Game to YourArcade</h1>
 
             <form method="post" action="/arcades/add" novalidate>
 

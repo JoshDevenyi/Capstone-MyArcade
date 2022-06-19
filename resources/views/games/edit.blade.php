@@ -8,7 +8,11 @@
 
         <div class="content">
 
-            <h1 class="pageHeading marginM">Edit Game: {{$game -> name}}</h1>
+            <h1 class="pageHeading marginM editAddHeading inputPageHeading">
+                Edit Game:
+                <br/>    
+                <span class="editOldName">{{$game -> name}}</span>
+            </h1>
 
             <form method="post" action="/games/edit/{{$game->id}}" novalidate class="w3-margin-bottom">
 
@@ -115,7 +119,7 @@
                 </div>    
 
                 <div class="inputGroup">
-                    <label for="cover">Box Art Image URL:</label>
+                    <label for="cover">Box Art URL:</label>
                     <input type="text" name="cover" id="cover" required value="{{old('cover', $game -> cover)}}">
 
                     @if($errors->first('cover'))

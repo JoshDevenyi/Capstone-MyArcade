@@ -41,7 +41,7 @@
 
                         <div id="popGames" class="flexContainer">
 
-                            <div class="gameDiv">
+                            <div class="gameDiv" id="gameDiv1">
                                 <div class="boxartBox imageGrow">
                                     <div class="flexContainerCol gameAlign">
                                         <a href="/games/game/{{$popgames[0]->id}}" id="popLinkOne">
@@ -52,7 +52,7 @@
                             </div>
 
 
-                            <div class="gameDiv">
+                            <div class="gameDiv" id="gameDiv2">
                                     <div class="boxartBox imageGrow">
                                     <div class="flexContainerCol gameAlign">
                                         <a href="/games/game/{{$popgames[1]->id}}" id="popLinkTwo">
@@ -62,7 +62,7 @@
                                 </div>
                             </div>
 
-                            <div class="gameDiv">
+                            <div class="gameDiv" id="gameDiv3">
                                     <div class="boxartBox imageGrow">
                                         <div class="flexContainerCol gameAlign">
                                             <a href="/games/game/{{$popgames[2]->id}}" id="popLinkThree">
@@ -105,7 +105,7 @@
         </div>
 
     </div>
-    <script src="{{ url('/js/indexJS.js') }}"></script>
+    <script src="{{ url('/js/indexInteraction.js') }}"></script>
 </main>
 
 @stop

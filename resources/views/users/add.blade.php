@@ -8,7 +8,7 @@
 
         <div class="content">
 
-            <h1 class="pageHeading marginM">Register with MyArcade</h1>
+            <h1 class="pageHeading marginM inputPageHeading">Register with MyArcade</h1>
 
             <form method="post" action="/users/add" novalidate class="w3-margin-bottom">
 

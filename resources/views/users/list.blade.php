@@ -46,7 +46,7 @@
                         </th>
                         <th>
                             <a class="listSortLink" href="/users/list/type">
-                                Account Type
+                                Type
                             </a>
                         </th>
                         <th></th>
@@ -58,22 +58,48 @@
                         @else
                         <tr class="userEntry">
                         @endif
-                            <td class="userTextEntry">{{$value->id}}</td> 
-                            <td class="userNameEntry">
-                                <a href="/users/user/{{$value->id}}">{{$value->first_name}} {{$value->last_name}}</a>
+                            <td id="userIDCell" class="userTextEntry">
+                                <div class="userCellData">
+                                    {{$value->id}}
+                                </div>
                             </td>
-                            <td class="userTextEntry">{{$value->username}}</td>
-                            <td class="userEmailEntry">{{$value->email}}</td>
-                            <td class="userTextEntry">{{$value->account_type}}</td>
+
+                            <td id="userNameCell"class="userNameEntry">
+                                <div class="userCellData">
+                                    <a href="/users/user/{{$value->id}}">{{$value->first_name}} {{$value->last_name}}</a>
+                                </div>
+                            </td>
+                            
+                            <td id="userUsernameCell" class="userTextEntry">
+                                <div class="userCellData">
+                                    {{$value->username}}
+                                </div>
+                            </td>
+                            
+                            <td id="userEmailCell" class="userEmailEntry">
+                                <div class="userCellData">
+                                    {{$value->email}}
+                                </div>
+                            </td>
+                            
+                            <td class="userTextEntry" id="userTypeCell">
+                                <div class="userCellData">
+                                    {{$value->account_type}}
+                                </div>
+                            </td>
 
                             <td class="userButtons">
-                                <a href="/users/edit/{{$value->id}}">
-                                    <div class="arcadeButton arcadeEdit">Edit</div>
-                                </a>
-    
-                                <a href="/users/deleteconfirm/{{$value->id}}">
-                                    <div class="arcadeButton">Delete</div>
-                                </a>
+                                <div class="userCellData">
+                                    <a href="/users/edit/{{$value->id}}">
+                                        <div class="arcadeButton arcadeEdit wideButtonUser">Edit</div>
+                                        <div class="udButton udButtonIcon udButtonEdit narrowButtonUser"><span class="iconify buttonIcon" data-icon="clarity:edit-solid"></span></div>
+                                    </a>
+        
+                                    <a href="/users/deleteconfirm/{{$value->id}}">
+                                        <div class="arcadeButton wideButtonUser">Delete</div>
+                                        <div class="udButton udButtonIcon udButtonEdit narrowButtonUser"><span class="iconify buttonIcon" data-icon="ep:delete-filled"></span></div>
+                                    </a>
+                                </div>
                             </td>
 
                         </tr>
